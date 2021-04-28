@@ -1,0 +1,33 @@
+<div class="panel panel-heading">
+  commande
+</div>
+<div *ngIf="datacommande">
+  <div class="col-lg-5">
+<div class="panel-body" >
+  <form class="form-group-lg ant-form-item-has-success">
+
+    <div class="form-group ">
+      <input type="text" [(ngModel)]="datacommande.idCommand" name="id" class="form-control " >
+      <br>
+    </div>
+
+    <div class="form-group ">
+      <input type="text" [(ngModel)]="datacommande.ref" name="ref" class="form-control ">
+      <br>
+    </div>
+
+    <div class="form-group ">
+      <input type="text" [(ngModel)]="datacommande.total" name="total" class="form-control ">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success col-lg-5">updtae</button>
+    </div>
+
+
+  </form>
+
+</div>
+
+</div>
+</div>

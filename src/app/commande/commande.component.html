@@ -1,0 +1,153 @@
+
+
+<div style="background: #ECECEC;padding:30px;">
+  <nz-card style="width:100%;" [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+
+          <button class="btn btn-primary" (click)="ongetcommanes()">commandes</button>
+
+        <div class="panel-body">
+          <form #f="ngForm" (ngSubmit)="oncherecher(f.value)">
+            <label>keyword</label>
+
+            <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+              <input type="text" nz-input placeholder="input search text" name="keyword" ngModel />
+            </nz-input-group>
+            <ng-template #suffixIconButton>
+              <button nz-button nzType="default"  nzShape="circle"  nzSearch nzDanger><i nz-icon nzType="search"></i></button>
+            </ng-template>
+
+
+          </form>
+
+          <table class="table table-striped" *ngIf="commandes">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">id</th>
+              <th scope="col">ref</th>
+              <th scope="col">total</th>
+              <th scope="col">actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let c of commandes">
+              <th scope="row">1</th>
+              <td>{{ c.idCommand}}</td>
+              <td>{{ c.ref}}</td>
+              <td>{{ c.total}}</td>
+              <td>
+                <a class="btn btn-danger" (click)="DeleteCommande(c)">Delete</a>
+
+
+              </td>
+              <td> <a class="btn btn-success" (click)="editCommande(c)">edit</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+  </nz-card>
+</div>
+<div style="background: #ECECEC;padding:30px;">
+  <nz-card style="width:100%;" [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+
+    <button class="btn btn-primary" (click)="ongetcommanes()">commandes</button>
+
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="oncherecher(f.value)">
+        <label>keyword</label>
+
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+          <input type="text" nz-input placeholder="input search text" name="keyword" ngModel />
+        </nz-input-group>
+        <ng-template #suffixIconButton>
+          <button nz-button nzType="default"  nzShape="circle"  nzSearch nzDanger><i nz-icon nzType="search"></i></button>
+        </ng-template>
+
+
+      </form>
+
+      <table class="table table-striped" *ngIf="commandes">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">id</th>
+          <th scope="col">ref</th>
+          <th scope="col">total</th>
+          <th scope="col">actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of commandes">
+          <th scope="row">1</th>
+          <td>{{ c.idCommand}}</td>
+          <td>{{ c.ref}}</td>
+          <td>{{ c.total}}</td>
+          <td>
+            <a class="btn btn-danger" (click)="DeleteCommande(c)">Delete</a>
+
+
+          </td>
+          <td> <a class="btn btn-success" (click)="editCommande(c)">edit</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </nz-card>
+</div>
+
+<div style="background: #ECECEC;padding:30px;">
+  <nz-card style="width:100%;" [nzBordered]="false" nzTitle="Card title" [nzExtra]="extraTemplate">
+
+    <button class="btn btn-primary" (click)="ongetcommanes()">commandes</button>
+
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="oncherecher(f.value)">
+        <label>keyword</label>
+
+        <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+          <input type="text" nz-input placeholder="input search text" name="keyword" ngModel />
+        </nz-input-group>
+        <ng-template #suffixIconButton>
+          <button nz-button nzType="default"  nzShape="circle"  nzSearch nzDanger><i nz-icon nzType="search"></i></button>
+        </ng-template>
+
+
+      </form>
+
+      <table class="table table-striped" *ngIf="commandes">
+        <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">id</th>
+          <th scope="col">ref</th>
+          <th scope="col">total</th>
+          <th scope="col">actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let c of commandes">
+          <th scope="row">1</th>
+          <td>{{ c.idCommand}}</td>
+          <td>{{ c.ref}}</td>
+          <td>{{ c.total}}</td>
+          <td>
+            <a class="btn btn-danger" (click)="DeleteCommande(c)">Delete</a>
+
+
+          </td>
+          <td> <a class="btn btn-success" (click)="editCommande(c)">edit</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </nz-card>
+</div>
+<ng-template #extraTemplate>
+  <a>More</a>
+</ng-template>

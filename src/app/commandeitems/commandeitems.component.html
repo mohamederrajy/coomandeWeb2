@@ -1,0 +1,26 @@
+<nz-steps [nzCurrent]="1">
+  <nz-step nzTitle="Finished" nzDescription="This is a description."></nz-step>
+  <nz-step nzTitle="In Progress" nzSubtitle="Left 00:00:08" nzDescription="This is a description."> </nz-step>
+  <nz-step nzTitle="Waiting" nzDescription="This is a description."></nz-step>
+</nz-steps>
+<form #f ="ngForm" nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm(f.value)">
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your username!">
+      <nz-input-group nzPrefixIcon="user">
+        <input type="text" nz-input formControlName="ref" name="ref" placeholder="ref" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-control nzErrorTip="Please input your total!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input type="text" nz-input formControlName="total" placeholder="total" name="total"/>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+
+
+  <button nz-button class="login-form-button login-form-margin" nzType="'primary'" type="submit">Sing up</button>
+  Or <a> register now! </a>
+</form>
